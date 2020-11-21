@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "projects": {
+    "tupiniquim-validators": {
+      "projectType": "library",
+      "root": "libs/tupiniquim-validators",
+      "sourceRoot": "libs/tupiniquim-validators/src",
+      "prefix": "tupini",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/tupiniquim-validators/tsconfig.lib.json",
+            "project": "libs/tupiniquim-validators/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tupiniquim-validators/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tupiniquim-validators/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/tupiniquim-validators/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest",
+      "strict": true
+    }
+  },
+  "defaultProject": "tupiniquim-validators"
+}
