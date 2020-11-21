@@ -1,7 +1,7 @@
 {
   "name": "@tupini-tech/tupiniquim-validators",
   "description": "Brazilian CPF and CNPJ Validators for Angular Forms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/rodzappa/tupini-tech",
   "author": "Rodolfo Zappa (https://github.com/rodzappa)",
   "license": "MIT",
